@@ -10,4 +10,18 @@ public class ProjectManager extends Employee{
         role.setRoleName("PorjectManager");
         roleList.add(role);
     }
+
+
+    public void manageProject(Project project)
+    {
+        System.out.println("project: "+project.toString()+"\n is managed by" +this.getEmpName());
+        project.setManager(this);
+
+    }
+
+    public Project createProject()
+    {
+        System.out.println("project: "+"\n is created by" +this.getEmpName());
+        return new Project();
+    }
 }
