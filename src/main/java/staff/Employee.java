@@ -1,3 +1,7 @@
+package staff;
+
+import resources.Role;
+
 import java.util.ArrayList;
 
 /**

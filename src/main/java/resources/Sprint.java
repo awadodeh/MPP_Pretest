@@ -1,3 +1,7 @@
+package resources;
+
+import staff.ScrumMaster;
+
 import java.util.ArrayList;
 import java.util.Date;
 

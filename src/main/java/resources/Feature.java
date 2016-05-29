@@ -1,3 +1,8 @@
+package resources;
+
+import staff.Developer;
+import staff.Tester;
+
 /**
  * Created by 985191 on 5/29/2016.
  */

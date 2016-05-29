@@ -1,4 +1,7 @@
-import java.lang.reflect.Array;
+package resources;
+
+import staff.ProjectManager;
+
 import java.util.ArrayList;
 
 /**
@@ -11,17 +14,26 @@ public class Project {
     private ArrayList<Sprint> sprintsList;
     private ArrayList<Feature> listfeaturs;
 
-    public Project(){};
+    public Project(){
+        sprintsList=new ArrayList<Sprint>();
+        listfeaturs=new ArrayList<Feature>();
+    }
 
     public Project(String projectName) {
         this.projectName = projectName;
+
+        sprintsList=new ArrayList<Sprint>();
+        listfeaturs=new ArrayList<Feature>();
     }
 
     public Project(String projectName, ProjectManager manager, ArrayList<Sprint> sprintsList, ArrayList<Feature> listfeaturs) {
+        sprintsList=new ArrayList<Sprint>();
+        listfeaturs=new ArrayList<Feature>();
         this.projectName = projectName;
         this.manager = manager;
         this.sprintsList = sprintsList;
         this.listfeaturs = listfeaturs;
+
     }
 
     public String getProjectName() {
@@ -45,7 +57,7 @@ public class Project {
     }
 
     public void setSprintsList(ArrayList<Sprint> sprintsList) {
-        this.sprintsList = sprintsList;
+        this.sprintsList.addAll(sprintsList);
     }
 
     public ArrayList<Feature> getListfeaturs() {

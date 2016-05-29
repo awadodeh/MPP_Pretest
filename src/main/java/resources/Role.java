@@ -1,3 +1,5 @@
+package resources;
+
 /**
  * Created by 985191 on 5/29/2016.
  */
@@ -5,6 +7,18 @@ public class Role {
 
     private String roleName;
     private int roleId = 0;
+    private RoleType roleType;
+
+    /**
+     * This shows role an Employee has
+     */
+    enum RoleType {
+        PROJECT_MANAGER,
+        SCRUM_MASTER,
+        DEVELOPER,
+        TERSTER,
+    }
+
 
 
     public Role() {
@@ -15,6 +29,13 @@ public class Role {
         this.roleId = roleId;
     }
 
+    public RoleType getRoleType() {
+        return roleType;
+    }
+
+    public void setRoleType(RoleType roleType) {
+        this.roleType = roleType;
+    }
 
     public String getRoleName() {
         return roleName;
